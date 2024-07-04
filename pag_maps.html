@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapas Cloropléticos Interativos</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+   <!-- links -->
+  <link rel="shortcut icon" href="img/icons8-matemática-50.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+   .card:hover .card-img-top {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+.modal-body img {
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Mapas Cloropléticos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="pag_mapas.html">Mapas Cloropléticos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#article">Artigo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero bg-dark text-white py-2">
+      <div class="container">
+       <h1 class="display-4">Explore Mapas Cloropléticos Interativos</h1>
+  <p class="lead">Relatórios técnicos de maneira visual e interativa.</p>
+       <a href="pag_mapas.html" class="btn btn-primary btn-lg">voltar</a>
+      </div>
+    </section>
+
+    
+   <section class="maps py-5" id="pdf" data-aos="zoom-in">
+      <div class="container">
+        <h2 class="mb-4 text-center bg-light">Mapas Cloropléticos diversos</h2>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card">
+               <img src="img_mapas/alfa_crede.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">img_mapas/alfa_crede.png</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE </small></p>
+                <a href="#" class="btn btn-primary" onclick="viewFile('img_mapas/alfa_crede.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/alfa_rmf.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">alfa_rmf</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/alfa_rmf.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/crede_1_AF_IDEB_2021.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">crede_1_AF_IDEB_2021</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE </small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/crede_1_AF_IDEB_2021.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/crede_1_AI_IDEB_2021.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">crede_1_AI_IDEB_2021</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/crede_1_AI_IDEB_2021.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/IDEB_AF_RMF_2021.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">IDEB_AF_RMF_2021</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE </small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/IDEB_AF_RMF_2021.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/IDEB_AI_RMF_2021.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">IDEB_AI_RMF_2021</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/IDEB_AI_RMF_2021.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3 mb-3">
+            <div class="card">
+             <img src="img_mapas/NOTA_IDEB_2021_DOS_MUNIC_PIOS_DO_CEAR.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_IDEB_2021_DOS_MUNIC_PIOS_DO_CEAR</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_IDEB_2021_DOS_MUNIC_PIOS_DO_CEAR.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_IDEB_2021_NO_BRASIL.jpeg" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_IDEB_2021_NO_BRASIL</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_IDEB_2021_NO_BRASIL.jpeg')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_CREDE_1_AF_LP.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_CREDE_1_AF_LP</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_CREDE_1_AF_LP.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_CREDE_1_AF_MT.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_CREDE_1_AF_MT</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_CREDE_1_AF_MT.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_CREDE_1_AI_LP.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_CREDE_1_AI_LP</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_CREDE_1_AI_LP.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_CREDE_1_AI_MT.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_CREDE_1_AI_MT</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_CREDE_1_AI_MT.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_RMF_1_AF_lp.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_RMF_1_AF_lp</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_RMF_1_AF_lp.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_RMF_1_AF_mt.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_RMF_1_AF_mt</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_RMF_1_AF_mt.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_RMF_1_AI_lp.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_RMF_1_AI_lp</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_RMF_1_AI_lp.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/NOTA_SAEB_2021_RMF_1_AI_mt.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">NOTA_SAEB_2021_RMF_1_AI_mt</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/NOTA_SAEB_2021_RMF_1_AI_mt.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Profici_ncia_de_L_ngua_Portuguesa___9__ANO___SPAECE_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Profici_ncia_de_L_ngua_Portuguesa___9__ANO___SPAECE_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Profici_ncia_de_L_ngua_Portuguesa___9__ANO___SPAECE_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Profici_ncia_de_Matem_tica___9__ANO___SPAECE_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Profici_ncia_de_Matem_tica___9__ANO___SPAECE_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Profici_ncia_de_Matem_tica___9__ANO___SPAECE_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Profici_ncia_em_Matem_tica_5_ANO___SPAECE_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Profici_ncia_em_Matem_tica_5_ANO___SPAECE_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Profici_ncia_em_Matem_tica_5_ANO___SPAECE_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+           <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Profici_ncia_M_dia_de_L_ngua_Portuguea_5__ANO___SPAECE_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Profici_ncia_M_dia_de_L_ngua_Portuguea_5__ANO___SPAECE_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Profici_ncia_M_dia_de_L_ngua_Portuguea_5__ANO___SPAECE_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Profici_ncia_M_dia_SPAECE_ALFA_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Profici_ncia_M_dia_SPAECE_ALFA_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Profici_ncia_M_dia_SPAECE_ALFA_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img_mapas/Taxa_de_Alfabeiza__o_2022____.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Taxa_de_Alfabeiza__o_2022____</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img_mapas/Taxa_de_Alfabeiza__o_2022____.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img/Macro_região_1_SPAECE_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Macro_região_1_SPAECE_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img/Macro_região_1_SPAECE_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img/Macro_região_1_SPAECE_2023.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">Macro_região_1_SPAECE_2023</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img/Macro_região_1_SPAECE_2023.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img/ceara_spaece_2022.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">ceara_spaece_2022</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img/ceara_spaece_2022.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card">
+              <img src="img/ceara_spaece_2023.png" class="card-img-top" alt="Mapa 2">
+              <div class="card-body">
+                <h5 class="card-title">MAPAS</h5>
+                <p class="card-text">ceara_spaece_2023</p>
+                <p class="card-text"><small class="text-muted">Fonte: SPAECE</small></p>
+                <a href="#" class="btn btn-primary" onclick="showFile('img/ceara_spaece_2023.png')">Visualizar</a>
+              </div>
+            </div>
+          </div>
+    </section>
+
+     <div class="modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="fileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fileModalLabel">Visualização do Arquivo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="fileContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div>
+  </div>
+  </main>
+
+  <footer class="bg-dark text-white py-4" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 Mapas Cloropléticos. Todos os direitos reservados.</p>
+        </div>
+        <div class="col-md-6 text-md-right">
+           <p>e-mail: suporteteceducacao@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+    function showFile(filePath) {
+      var fileType = filePath.split('.').pop();
+      var fileContainer = document.getElementById('fileContainer');
+
+      if (fileType === 'pdf') {
+        fileContainer.innerHTML = '<iframe src="' + filePath + '" width="100%" height="500px" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>';
+      } else if (fileType === 'jpeg' || fileType === 'jpg' || fileType === 'png') {
+        fileContainer.innerHTML = '<img src="' + filePath + '" class="img-fluid" oncontextmenu="return false;">';
+      }
+
+      $('#fileModal').modal('show');
+    }
+
+    function viewFile(fileUrl) {
+  window.open(fileUrl, '_blank');
+}
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+ <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script>
+  AOS.init();
+</script>
+</body>
+</html>
